@@ -10,7 +10,7 @@ import UIKit
 
 class ImageViewController: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
 
-    var firstInfo: [String: Any] = ["":""]
+    public var pickedImage: UIImage!
     
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -44,10 +44,10 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate , U
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         
-        if firstInfo.isEmpty {
-            photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        if (pickedImage != nil) {
+            photoImageView.image = pickedImage
         } else {
-            photoImageView.image = firstInfo[UIImagePickerControllerOriginalImage] as? UIImage
+            photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         }
         
         picker.dismiss(animated: true, completion: {

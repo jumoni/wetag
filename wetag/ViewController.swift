@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate  {
 
     @IBOutlet weak var titleLabel: UILabel!
+    var pickedImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
             self.present(picker, animated: true, completion: {
                 () -> Void in
             })
+            
         } else {
             print("failed to read from photolibrary")
         }
@@ -33,9 +35,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         print(info)
         
-        let sendInfo = info
-        self.performSegue(withIdentifier: "select", sender: sendInfo)
-        
+        pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.performSegue(withIdentifier: "select", sender: pickedImage)
         picker.dismiss(animated: true, completion: {
             () -> Void in
         })
@@ -44,7 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "select" {
             let controller = segue.destination as! ImageViewController
-            controller.firstInfo = (sender as? [String: Any])!
+            controller.pickedImage = pickedImage
         }
     }
 
