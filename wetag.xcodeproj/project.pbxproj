@@ -13,6 +13,7 @@
 		BA3849481EE8E62B0049B375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3849471EE8E62B0049B375 /* Assets.xcassets */; };
 		BA38494B1EE8E62B0049B375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3849491EE8E62B0049B375 /* LaunchScreen.storyboard */; };
 		BA3849561EE8E62C0049B375 /* wetagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849551EE8E62C0049B375 /* wetagTests.swift */; };
+		BA3849611EE8F5400049B375 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849601EE8F5400049B375 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BA3849511EE8E62B0049B375 /* wetagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wetagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3849551EE8E62C0049B375 /* wetagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wetagTests.swift; sourceTree = "<group>"; };
 		BA3849571EE8E62C0049B375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA3849601EE8F5400049B375 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				BA3849401EE8E62B0049B375 /* AppDelegate.swift */,
 				BA3849421EE8E62B0049B375 /* ViewController.swift */,
+				BA3849601EE8F5400049B375 /* ImageViewController.swift */,
 				BA3849441EE8E62B0049B375 /* Main.storyboard */,
 				BA3849471EE8E62B0049B375 /* Assets.xcassets */,
 				BA3849491EE8E62B0049B375 /* LaunchScreen.storyboard */,
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA3849431EE8E62B0049B375 /* ViewController.swift in Sources */,
+				BA3849611EE8F5400049B375 /* ImageViewController.swift in Sources */,
 				BA3849411EE8E62B0049B375 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +410,7 @@
 				BA38495C1EE8E62C0049B375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA38495D1EE8E62C0049B375 /* Build configuration list for PBXNativeTarget "wetagTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +419,7 @@
 				BA38495F1EE8E62C0049B375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
